@@ -1,6 +1,6 @@
 # Resume Chatbot
 
-![Chat with Alena Interface](screenshot.png)
+![Chat with Alena Interface](images/screenshot.png)
 
 An AI-powered chatbot built with Gradio and OpenAI that answers questions about Alena Bukilic Dragicevic's career, background, skills, and experience. The chatbot uses GPT-4o-mini to provide personalized responses based on her CV and professional summary.
 
