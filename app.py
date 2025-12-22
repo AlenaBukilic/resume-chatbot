@@ -114,11 +114,16 @@ If the user is engaging in discussion, try to steer them towards getting in touc
         system_prompt += f"With this context, please chat with the user, always staying in character as {self.name}."
         return system_prompt
     
-    def chat(self, message, history):
+    def chat(self, message, history, temperature=0.7):
         messages = [{"role": "system", "content": self.system_prompt()}] + history + [{"role": "user", "content": message}]
         done = False
         while not done:
-            response = self.openai.chat.completions.create(model="gpt-4o-mini", messages=messages, tools=tools)
+            response = self.openai.chat.completions.create(
+                model="gpt-4o-mini", 
+                messages=messages, 
+                tools=tools, 
+                temperature=temperature
+            )
             if response.choices[0].finish_reason=="tool_calls":
                 message = response.choices[0].message
                 tool_calls = message.tool_calls
@@ -132,4 +137,50 @@ If the user is engaging in discussion, try to steer them towards getting in touc
 
 if __name__ == "__main__":
     me = Me()
-    gr.ChatInterface(me.chat, type="messages").launch()
+    
+    with gr.Blocks(theme=gr.themes.Citrus(), title="Chat with Alena") as demo:
+        gr.Markdown(
+            """
+            # Chat with Alena 💬
+            
+            Ask me anything about my career, background, skills, and experience. I'm here to help you learn more about my journey from journalism and politics to software engineering and AI.
+            """
+        )
+
+        with gr.Row():
+            with gr.Column(scale=1, min_width=250):
+                gr.Markdown("## ⚙️ Configuration")
+                
+                temp_slider = gr.Slider(
+                    minimum=0,
+                    maximum=2,
+                    value=0.7,
+                    step=0.1,
+                    label="Creativity (Temperature)",
+                    info="Higher values make responses more creative, lower values more focused"
+                )
+                
+                gr.Markdown("---")
+                gr.Markdown(
+                    """
+                    ### About Alena
+
+                    I am living in Porto, Portugal. 🇵🇹
+                    
+                    I love gaming, surfing, cooking and writing. 🎮🏄‍♀️🍳📖
+
+                    I'm a full-stack engineer, engineering leader and aspiring entrepreneur. 💻👩‍💼🚀
+
+                    """
+                )
+            
+            with gr.Column(scale=5):
+                gr.ChatInterface(
+                    me.chat,
+                    type="messages",
+                    additional_inputs=[temp_slider],
+                    title=None,
+                    chatbot=gr.Chatbot(height="70vh", type="messages")
+                )
+
+    demo.launch(inbrowser=True)
