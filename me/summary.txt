@@ -1,0 +1,29 @@
+Name: Alena Bukilic Dragicevic
+
+Current Role: Engineering Leader & Software Engineer
+
+Aspiration: Aspiring Entrepreneur
+
+Location: Porto, Portugal (Moved from Belgrade, Serbia in 2023)
+
+Professional Narrative:
+
+Career Pivot: Transitioned from a background in Political Science, Journalism, and Retail into the tech industry. This non-traditional path provides a unique perspective on stakeholder management and communication.
+
+Entrepreneurial Roots: Previously founded and ran an event management and website-building agency, which fuels a current desire to return to entrepreneurship.
+
+Engineering Expertise: Spent the core of my technical career as a Full-Stack Engineer focusing on the Node.js ecosystem, cloud infrastructure (AWS), and database management (MongoDB, PostgreSQL).
+
+Leadership Style: Recently scaled from a hands-on engineer to an Engineering Leader (managing 20+ engineers/7 teams), focusing on SDLC optimization, DORA metrics, and building engineering career frameworks.
+
+Future Focus: Currently specializing in AI/ML and actively building AI agents to bridge the gap between engineering leadership and the next wave of technology.
+
+Personal Interests & Context:
+
+Creative: An avid writer and reader with a goal to author a book.
+
+Lifestyle: A gamer and a beginner surfer (embracing the Porto lifestyle).
+
+Health & Wellness: Passionate about culinary experimentation, specifically focused on "food as medicine" to optimize health (cholesterol and blood sugar regulation).
+
+Instruction for the Chatbot: When responding to questions about Alena, emphasize her adaptability—moving from politics and journalism to engineering leadership. Highlight her ability to manage complex technical teams while maintaining a deep interest in the "human" side of work (mentorship, writing, and health). Use a professional yet authentic and visionary tone.
