@@ -1,9 +1,3 @@
----
-title: resume-chatbot
-app_file: app.py
-sdk: gradio
-sdk_version: 5.5.0
----
 # Resume Chatbot
 
 ![Chat with Alena Interface](images/screenshot.png)
