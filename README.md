@@ -1,3 +1,9 @@
+---
+title: resume-chatbot
+app_file: app.py
+sdk: gradio
+sdk_version: 5.5.0
+---
 # Resume Chatbot
 
 ![Chat with Alena Interface](images/screenshot.png)
@@ -89,7 +95,7 @@ resume-chatbot/
 ├── requirements.txt    # Python dependencies
 ├── .env                # Environment variables (not in git)
 ├── images/
-│   ├── screenshot.png      # Application screenshot
+│   ├── screenshot.png # Application screenshot
 ├── me/
 │   ├── cv.pdf         # CV document
 │   └── summary.txt    # Professional summary
