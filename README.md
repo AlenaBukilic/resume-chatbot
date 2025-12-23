@@ -95,9 +95,3 @@ resume-chatbot/
 │   └── summary.txt    # Professional summary
 └── README.md          # This file
 ```
----
-title: resume-chatbot
-app_file: app.py
-sdk: gradio
-sdk_version: 5.5.0
----
